@@ -32,9 +32,9 @@ class Auto
         return $this->color;
     }
 
-    public function acelerar()
+    public function acelerar($velocidad)
     {
-        return "ruuuuun";
+        return $velocidad*2;
     }
 }
 
@@ -51,7 +51,7 @@ $ferrari->setColor("Rojo");
 echo "Los datos de nuestro objeto ferrari son: " . "\n";
 echo $ferrari->getMarca(). "\n";
 echo $ferrari->getColor() . "\n";
-echo $ferrari->acelerar() . "\n";
+echo $ferrari->acelerar(100) . "\n";
 
 
 $clio = new Auto;
@@ -66,7 +66,7 @@ echo  "\n";
 echo "Los datos de nuestro objeto Clio son: " . "\n";
 echo $clio->getMarca(). "\n";
 echo $clio->getColor() . "\n";
-echo $clio->acelerar() . "\n";
+echo $clio->acelerar(70) . "\n";
 
 
 

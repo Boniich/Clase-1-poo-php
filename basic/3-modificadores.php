@@ -32,11 +32,11 @@ class Persona
 
 
 
-$persona1 =  new Persona;
+// $persona1 =  new Persona;
 
-echo $persona1->getNombre(). "\n";
-echo $persona1->getAltura(). "\n";
-echo $persona1->darOficio(). "\n";
+// echo $persona1->getNombre(). "\n";
+// echo $persona1->getAltura(). "\n";
+// echo $persona1->darOficio(). "\n";
 
 // que pasa si yo intento hacer uso de la variable $altura por fuera de su clase?
 
@@ -47,9 +47,9 @@ echo $persona1->darOficio(). "\n";
 //echo $persona1->oficio;
 
 //Que crees que pasara al tratar de ejecutar este metodo?
-//$persona1->modificarAltura(1.65);
+$persona1->modificarAltura(1.65);
 
-echo $persona1->getAltura(). "\n";
+// echo $persona1->getAltura(). "\n";
 
 
 class Empleado extends Persona
@@ -59,7 +59,7 @@ class Empleado extends Persona
     public function modificarOficio()
     {
         $this->oficio = "Trabajador";
-        //$this->modificarAltura(1.50); funcionara si intento utilizar un metodo con el modificador de accesso private?
+        //$this->modificarAltura(1.50); //funcionara si intento utilizar un metodo con el modificador de accesso private?
     }
     
 }

@@ -9,9 +9,12 @@ class Auto
     public $marca;
     public $color;
 
-    public function __construct($marca, $color) {
+    // en php solo es posible tener un constructor por clase
+
+    public function __construct($marca, $caballosDeFuerza) {
         $this->marca = $marca;
         $this->color = $color;
+        $this->caballosDeFuerza = $caballosDeFuerza;
     }
 
     //comportamientos (metodos)
@@ -41,18 +44,41 @@ class Auto
     }
 }
 
-$ferrari = new Auto("Ferrari","Rojo");
-$clio = new Auto("Clio","Azul");
+//caja (objeto ferrari) -> ($marca = "Ferrari")
+//caja (objeto clio) -> ($marca = "clio")
+
+$ferrari = new Auto("Ferrari","Negro",150);
+//$marca = "Ferrari"
+//$color = "Rojo"
+// $clio = new Auto("Clio","Azul");
+
+//$marca = "clio"
+//$color = "azul"
+
+//$ferrari->setMarca("Ferrari"); // $marca = "Ferrari"
+// hacemos lo mismo que en el caso anterior
+//$ferrari->setColor("Rojo"); // $color = "Rojo"
 
 echo "Los datos de nuestro objeto ferrari son: " . "\n";
-echo $ferrari->getMarca(). "\n";
-echo $ferrari->getColor() . "\n";
+echo $ferrari->getMarca(). "\n"; // Ferrari
+echo $ferrari->getColor() . "\n"; // Rojo
 echo $ferrari->acelerar() . "\n";
 
-echo  "\n";
+// echo  "\n";
 
-// imprimimos los valores de nuestro objeto ferrari
-echo "Los datos de nuestro objeto Clio son: " . "\n";
-echo $clio->getMarca(). "\n";
-echo $clio->getColor() . "\n";
-echo $clio->acelerar() . "\n";
+// // imprimimos los valores de nuestro objeto ferrari
+// echo "Los datos de nuestro objeto Clio son: " . "\n";
+// echo $clio->getMarca(). "\n";
+// echo $clio->getColor() . "\n";
+// echo $clio->acelerar() . "\n";
+
+// //$marca = "clio"
+// $clio->setMarca("Fitito");
+// //$marca = "fitito"
+
+// echo  "\n";
+
+// echo "Los datos de nuestro objeto Fitito son: " . "\n";
+// echo $clio->getMarca(). "\n";
+// echo $clio->getColor() . "\n";
+// echo $clio->acelerar() . "\n";
