@@ -83,7 +83,8 @@ $persona1->setVida(100);
 $persona1->setAtaque(150);
 $persona1->setDefensa(95);
 
-echo $persona1;
+echo $persona1->getNombre();
+echo $persona1->getVida();
 
 
 ?>
